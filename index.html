@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotomía 504 | Rotulación e Impresión Profesional</title>
+    
+    <!-- Script de Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fuente Inter de Google --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilo base para la fuente */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Configuración de colores personalizados de Tailwind */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rotomia-blue': '#00aef0',   /* Azul brillante del logo */
+                        'rotomia-yellow': '#fecb00', /* Amarillo/dorado del logo */
+                        'rotomia-dark': '#2d2d2d',   /* Gris oscuro/negro del logo */
+                    }
+                }
+            }
+        }
+
+        /* Estilos para Flip Card */
+        .flip-card {
+            perspective: 1000px; /* Efecto 3D */
+            background-color: transparent;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.7s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 0.5rem; /* rounded-lg */
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+            border-radius: 0.5rem; /* rounded-lg */
+            overflow: hidden;
+        }
+        .flip-card-front {
+            /* La imagen de fondo se pondrá inline */
+        }
+        .flip-card-back {
+            background-color: #00aef0; /* bg-rotomia-blue */
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem; /* p-6 */
+        }
+    </style>
+</head>
+<body class="bg-white text-rotomia-dark antialiased">
+
+    <!-- ========== HEADER ========== --><header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <!-- Logo --><div class="flex-shrink-0">
+                    <a href="#" title="Rotomía 504 Inicio">
+                        <img class="h-12 w-auto" 
+                             src="https://res.cloudinary.com/dufxtzcpl/image/upload/v1760152712/LOGO_ROTOMIA_bjkalv.png" 
+                             alt="Rotomía 504 Logo">
+                    </a>
+                </div>
+                
+                <!-- Navegación --><nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#services" class="px-3 py-2 text-sm font-medium text-rotomia-dark hover:text-rotomia-blue transition-colors">Servicios</a>
+                        <a href="#gallery" class="px-3 py-2 text-sm font-medium text-rotomia-dark hover:text-rotomia-blue transition-colors">Portafolio</a>
+                        <a href="#about" class="px-3 py-2 text-sm font-medium text-rotomia-dark hover:text-rotomia-blue transition-colors">Nosotros</a>
+                        <a href="#contact" class="rounded-md bg-rotomia-blue px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-opacity-90 transition-all">
+                            Contactar
+                        </a>
+                    </div>
+                </nav>
+                
+                <!-- Botón de Menú Móvil (opcional, por ahora solo nav de escritorio) --><div class="md:hidden">
+                    <a href="#contact" class="rounded-md bg-rotomia-blue px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-opacity-90 transition-all">
+                        Contactar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== --><main>
+
+        <!-- ========== HERO SECTION ========== --><section id="hero" class="relative flex h-screen items-center justify-center bg-cover bg-center text-white" 
+                 style="background-image: url('https://res.cloudinary.com/dufxtzcpl/image/upload/v1761328761/WhatsApp_Image_2025-10-24_at_11.58.38_AM_iplbvl.jpg');">
+            
+            <!-- Overlay con Degradado --><div class="absolute inset-0 bg-gradient-to-t from-rotomia-dark via-rotomia-dark/60 to-transparent"></div>
+            
+            <!-- Contenido Centrado del Hero --><div class="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+                <h1 class="text-6xl font-extrabold tracking-tight text-rotomia-yellow sm:text-7xl md:text-8xl">
+                    Rotomia504
+                </h1>
+                <p class="mx-auto mt-6 max-w-lg text-xl font-medium text-white sm:max-w-3xl">
+                    Lleva tu imagen a la vista de todos.
+                </p>
+                <div class="mt-10">
+                    <a href="#contact" class="rounded-lg bg-gradient-to-r from-rotomia-yellow to-rotomia-blue px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:from-rotomia-blue hover:to-rotomia-yellow">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SERVICES SECTION ========== --><section id="services" class="bg-gray-50 py-16 sm:py-24">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base font-semibold uppercase tracking-wide text-rotomia-blue">Nuestros Servicios</h2>
+                    <p class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Soluciones Integrales de Publicidad</p>
+                </div>
+
+                <!-- Grid de Servicios Principales --><div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    
+                    <!-- Servicio 1: Corte CNC --><div class="flip-card h-80 rounded-lg">
+                        <div class="flip-card-inner">
+                            <!-- Cara Frontal (Imagen) --><div class="flip-card-front bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/dufxtzcpl/image/upload/v1761335346/Gemini_Generated_Image_qhxnf8qhxnf8qhxn_tajes0.webp')">
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
+                                    <h3 class="text-2xl font-bold text-white">Corte en CNC</h3>
+                                </div>
+                            </div>
+                            <!-- Cara Trasera (Información) --><div class="flip-card-back">
+                                <h3 class="text-xl font-bold text-rotomia-yellow">Corte en CNC</h3>
+                                <p class="mt-2 text-base">Cortes de precisión computarizados en madera, metal, PVC, acrílico y vidrio.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2: Letras Encajueladas --><div class="flip-card h-80 rounded-lg">
+                        <div class="flip-card-inner">
+                            <!-- Cara Frontal (Imagen) --><div class="flip-card-front bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/dufxtzcpl/image/upload/v1761335347/Gemini_Generated_Image_dpivlsdpivlsdpiv_jxirzk.webp')">
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
+                                    <h3 class="text-2xl font-bold text-white">Letras Encajueladas</h3>
+                                </div>
+                            </div>
+                            <!-- Cara Trasera (Información) --><div class="flip-card-back">
+                                <h3 class="text-xl font-bold text-rotomia-yellow">Letras Encajueladas</h3>
+                                <p class="mt-2 text-base">Letras 3D con iluminación LED de alta calidad para un acabado elegante y visible.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3: Rotulación Vehicular --><div class="flip-card h-80 rounded-lg">
+                        <div class="flip-card-inner">
+                            <!-- Cara Frontal (Imagen) --><div class="flip-card-front bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/dufxtzcpl/image/upload/v1761335347/Gemini_Generated_Image_k90jldk90jldk90j_p92jh7.webp')">
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
+                                    <h3 class="text-2xl font-bold text-white">Rotulación Vehicular</h3>
+                                </div>
+                            </div>
+                            <!-- Cara Trasera (Información) --><div class="flip-card-back">
+                                <h3 class="text-xl font-bold text-rotomia-yellow">Rotulación Vehicular</h3>
+                                <p class="mt-2 text-base">Publicidad móvil para tu vehículo o flotilla completa con viniles de alta resistencia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Servicio 4: Impresión Digital --><div class="flip-card h-80 rounded-lg">
+                        <div class="flip-card-inner">
+                            <!-- Cara Frontal (Imagen) --><div class="flip-card-front bg-cover bg-center" style="background-image: url('https://res.cloudinary.com/dufxtzcpl/image/upload/v1761335347/large-wide-digital-inkjet-printing-machine-during-production-generative-ai-photo_janbbu.webp')">
+                                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
+                                    <h3 class="text-2xl font-bold text-white">Impresión Digital</h3>
+                                </div>
+                            </div>
+                            <!-- Cara Trasera (Información) --><div class="flip-card-back">
+                                <h3 class="text-xl font-bold text-rotomia-yellow">Impresión Digital</h3>
+                                <p class="mt-2 text-base">Impresión en alta resolución sobre lona, vinil, microperforado y más.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Otros Servicios --><div class="mt-16 text-center">
+                    <h3 class="text-2xl font-bold">Y mucho más...</h3>
+                    <div class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-gray-700">
+                        <span>Corpóreos Retroiluminados</span>
+                        <span>•</span>
+                        <span>Vallas Publicitarias</span>
+                        <span>•</span>
+                        <span>Roller Ups y Stands</span>
+                        <span>•</span>
+                        <span>Gráfica de Piso y Murales</span>
+                        <span>•</span>
+                        <span>Tótems y Acrílicos</span>
+                        <span>•</span>
+                        <span>¡Imprenta General!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== GALLERY SECTION ========== --><section id="gallery" class="py-16 sm:py-24">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Nuestro Trabajo</h2>
+                    <p class="mt-4 text-lg text-gray-600">Proyectos que hablan por sí mismos.</p>
+                </div>
+
+                <!-- Grid de Galería --><div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    
+                    <!-- Imagen 1 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
+                        <img src="https://placehold.co/600x400/00aef0/ffffff?text=Letras+Encajueladas" alt="Proyecto de Letras Encajueladas" class="h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Letras Encajueladas</span>
+                    </div>
+                    
+                    <!-- Imagen 2 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
+                        <img src="https://placehold.co/600x400/fecb00/2d2d2d?text=Rotulación+Vehicular" alt="Proyecto de Rotulación Vehicular" class="h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Rotulación Vehicular</span>
+                    </div>
+
+                    <!-- Imagen 3 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
+                        <img src="https://placehold.co/600x400/2d2d2d/ffffff?text=Impresión+Digital" alt="Proyecto de Impresión Digital" class="h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Impresión Digital</span>
+                    </div>
+
+                    <!-- Imagen 4 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
+                        <img src="https://placehold.co/600x400/fecb00/2d2d2d?text=Stands+de+Feria" alt="Proyecto de Stands de Feria" class="h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Stands de Feria</span>
+                    </div>
+
+                    <!-- Imagen 5 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
+                        <img src="https://placehold.co/600x400/2d2d2d/ffffff?text=Corte+CNC" alt="Proyecto de Corte CNC" class="h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Corte CNC</span>
+                    </div>
+
+                    <!-- Imagen 6 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
+                        <img src="https://placehold.co/600x400/00aef0/ffffff?text=Vallas+Publicitarias" alt="Proyecto de Vallas Publicitarias" class="h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Vallas Publicitarias</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT US SECTION ========== --><section id="about" class="bg-rotomia-dark text-white py-16 sm:py-24">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
+                    <div>
+                        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Sobre Rotomía 504</h2>
+                        <p class="mt-6 text-lg text-gray-300">
+                            Somos una empresa dedicada a trabajos relacionados con el mundo del rótulo, la publicidad y la imagen.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-300">
+                            Nuestro servicio integral cubre <span class="font-bold text-rotomia-yellow">diseño, fabricación, montaje, reparación y mantenimiento</span>. Nos implicamos en sus proyectos como una extensión de su propia empresa, asegurando calidad y cuidando al detalle la imagen que proyecta a sus clientes.
+                        </p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/600x450/00aef0/ffffff?text=Taller+Rotomía+504" alt="Taller de Rotomía 504" class="h-full w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT CTA SECTION ========== --><section id="contact" class="bg-rotomia-yellow py-16 sm:py-24">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold tracking-tight text-rotomia-dark sm:text-4xl">
+                    ¿Listo para iniciar tu proyecto?
+                </h2>
+                <p class="mt-4 text-lg leading-6 text-rotomia-dark">
+                    ¡Demos vida a tu marca! Contáctanos ahora para una asesoría gratuita.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-6">
+                    
+                    <!-- Botón de Email --><a href="mailto:hola@rotomia504.site" class="inline-flex items-center justify-center rounded-lg bg-rotomia-blue px-6 py-3 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105">
+                        <!-- Icono Mail SVG --><svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
+                        Enviar Correo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== --><footer class="bg-rotomia-dark">
+        <div class="container mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center justify-between sm:flex-row">
+                <div class="flex items-center">
+                    <img class="h-10 w-auto" src="https://res.cloudinary.com/dufxtzcpl/image/upload/v1760152712/LOGO_ROTOMIA_bjkalv.png" alt="Rotomía 504 Logo">
+                    <span class="ml-4 text-lg font-bold text-white">Rotomía 504</span>
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-400 sm:mt-0 sm:text-right">
+                    <div class="mb-2 flex justify-center sm:justify-end">
+                        <a href="https://www.instagram.com/rotomia504?igsh=eGRqNzV5MHE3bzBz" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-rotomia-yellow transition-colors">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2.163c3.204 0 3.584.012 4.85.07 1.172.053 1.905.32 2.583.58a4.902 4.902 0 0 1 1.76 1.76c.26.678.527 1.41.58 2.583.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.172-.32 1.905-.58 2.583a4.902 4.902 0 0 1-1.76 1.76c-.678.26-1.41.527-2.583.58-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.172-.053-1.905-.32-2.583-.58a4.902 4.902 0 0 1-1.76-1.76c-.26-.678-.527-1.41-.58-2.583-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.172.32-1.905.58-2.583a4.902 4.902 0 0 1 1.76-1.76c.678-.26 1.41.527 2.583.58C8.416 2.175 8.796 2.163 12 2.163zm0 1.626c-3.14 0-3.483.01-4.695.067-1.11.05-1.716.29-2.203.48a3.272 3.272 0 0 0-1.178 1.178c-.19.487-.43 1.094-.48 2.203-.058 1.212-.067 1.555-.067 4.695s.01 3.483.067 4.695c.05 1.11.29 1.716.48 2.203a3.272 3.272 0 0 0 1.178 1.178c.487.19 1.094.43 2.203.48 1.212.058 1.555.067 4.695.067s3.483-.01 4.695-.067c1.11-.05 1.716-.29 2.203-.48a3.272 3.272 0 0 0 1.178-1.178c.19-.487.43-1.094.48-2.203.058-1.212.067-1.555.067-4.695s-.01-3.483-.067-4.695c-.05-1.11-.29-1.716-.48-2.203a3.272 3.272 0 0 0-1.178-1.178c-.487-.19-1.094.43-2.203-.48-1.212-.058-1.555-.067-4.695-.067zM12 6.873a5.127 5.127 0 1 0 0 10.254 5.127 5.127 0 0 0 0-10.254zm0 8.627a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm4.805-6.84a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p>&copy; 2025 Rotomía 504. Todos los derechos reservados. Honduras, C.A.</p>
+                    <p class="mt-1">Una división de Inversiones Alvarado.</p>
+                    <p class="mt-1">Hecho con IA por AutomatIA Studio</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== WHATSAPP FLOATING BUTTON ========== --><a href="https://wa.me/50487783902" target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-transform hover:scale-110">
+        <!-- Icono WhatsApp SVG --><svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.06 21.94L7.32 20.59C8.77 21.33 10.37 21.82 12.04 21.82C17.5 21.82 21.95 17.37 21.95 11.91C21.95 6.45 17.5 2 12.04 2M12.04 20.13C10.5 20.13 9.04 19.68 7.8 18.89L7.47 18.7L3.68 19.74L4.74 16.03L4.54 15.7C3.66 14.31 3.2 12.65 3.2 10.91C3.2 7.09 6.27 4 10.04 4C13.81 4 16.88 7.09 16.88 10.91C16.88 14.73 13.81 17.82 10.04 17.82C10.04 17.82 10.04 17.82 10.04 17.82M15.27 12.31C15.02 12.19 13.87 11.64 13.65 11.56C13.43 11.48 13.27 11.44 13.11 11.64C12.95 11.84 12.5 12.31 12.38 12.47C12.26 12.63 12.13 12.67 11.91 12.55C11.69 12.43 10.93 12.18 10.04 11.39C9.31 10.74 8.82 10 8.7 9.84C8.58 9.68 8.66 9.55 8.78 9.43C8.89 9.32 9.02 9.15 9.14 9C9.26 8.85 9.3 8.76 9.38 8.6C9.46 8.44 9.42 8.31 9.34 8.19C9.26 8.07 8.87 7.09 8.71 6.69C8.55 6.3 8.39 6.36 8.27 6.36C8.15 6.36 8.03 6.36 7.91 6.36C7.79 6.36 7.58 6.4 7.42 6.6C7.26 6.8 6.78 7.23 6.78 7.99C6.78 8.75 7.42 9.47 7.54 9.63C7.66 9.79 8.81 11.5 10.56 12.23C12.31 12.96 12.31 12.63 12.58 12.59C12.85 12.55 13.73 12.06 13.91 11.88C14.09 11.7 14.21 11.68 14.33 11.76C14.45 11.84 15.02 12.19 15.18 12.35C15.34 12.51 15.42 12.55 15.27 12.31Z" />
+        </svg>
+    </a>
+
+</body>
+</html>
+
+
