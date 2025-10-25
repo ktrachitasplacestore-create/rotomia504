@@ -17,19 +17,6 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Configuración de colores personalizados de Tailwind */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'rotomia-blue': '#00aef0',   /* Azul brillante del logo */
-                        'rotomia-yellow': '#fecb00', /* Amarillo/dorado del logo */
-                        'rotomia-dark': '#2d2d2d',   /* Gris oscuro/negro del logo */
-                    }
-                }
-            }
-        }
-
         /* Estilos para Flip Card */
         .flip-card {
             perspective: 1000px; /* Efecto 3D */
@@ -73,7 +60,7 @@
         }
     </style>
 </head>
-<body class="bg-white text-rotomia-dark antialiased">
+<body class="bg-white text-[#2d2d2d] antialiased">
 
     <!-- ========== HEADER ========== --><header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -88,17 +75,17 @@
                 
                 <!-- Navegación --><nav class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-6">
-                        <a href="#services" class="px-3 py-2 text-sm font-medium text-rotomia-dark hover:text-rotomia-blue transition-colors">Servicios</a>
-                        <a href="#gallery" class="px-3 py-2 text-sm font-medium text-rotomia-dark hover:text-rotomia-blue transition-colors">Portafolio</a>
-                        <a href="#about" class="px-3 py-2 text-sm font-medium text-rotomia-dark hover:text-rotomia-blue transition-colors">Nosotros</a>
-                        <a href="#contact" class="rounded-md bg-rotomia-blue px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-opacity-90 transition-all">
+                        <a href="#services" class="px-3 py-2 text-sm font-medium text-[#2d2d2d] hover:text-[#00aef0] transition-colors">Servicios</a>
+                        <a href="#gallery" class="px-3 py-2 text-sm font-medium text-[#2d2d2d] hover:text-[#00aef0] transition-colors">Portafolio</a>
+                        <a href="#about" class="px-3 py-2 text-sm font-medium text-[#2d2d2d] hover:text-[#00aef0] transition-colors">Nosotros</a>
+                        <a href="#contact" class="rounded-md bg-[#00aef0] px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-opacity-90 transition-all">
                             Contactar
                         </a>
                     </div>
                 </nav>
                 
                 <!-- Botón de Menú Móvil (opcional, por ahora solo nav de escritorio) --><div class="md:hidden">
-                    <a href="#contact" class="rounded-md bg-rotomia-blue px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-opacity-90 transition-all">
+                    <a href="#contact" class="rounded-md bg-[#00aef0] px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-opacity-90 transition-all">
                         Contactar
                     </a>
                 </div>
@@ -111,17 +98,17 @@
         <!-- ========== HERO SECTION ========== --><section id="hero" class="relative flex h-screen items-center justify-center bg-cover bg-center text-white" 
                  style="background-image: url('https://res.cloudinary.com/dufxtzcpl/image/upload/v1761328761/WhatsApp_Image_2025-10-24_at_11.58.38_AM_iplbvl.jpg');">
             
-            <!-- Overlay con Degradado --><div class="absolute inset-0 bg-gradient-to-t from-rotomia-dark via-rotomia-dark/60 to-transparent"></div>
+            <!-- Overlay con Degradado --><div class="absolute inset-0 bg-gradient-to-t from-[#2d2d2d] via-[#2d2d2d]/60 to-transparent"></div>
             
             <!-- Contenido Centrado del Hero --><div class="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                <h1 class="text-6xl font-extrabold tracking-tight text-rotomia-yellow sm:text-7xl md:text-8xl">
+                <h1 class="text-6xl font-extrabold tracking-tight text-[#fecb00] sm:text-7xl md:text-8xl">
                     Rotomia504
                 </h1>
                 <p class="mx-auto mt-6 max-w-lg text-xl font-medium text-white sm:max-w-3xl">
                     Lleva tu imagen a la vista de todos.
                 </p>
                 <div class="mt-10">
-                    <a href="#contact" class="rounded-lg bg-gradient-to-r from-rotomia-yellow to-rotomia-blue px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:from-rotomia-blue hover:to-rotomia-yellow">
+                    <a href="#contact" class="rounded-lg bg-gradient-to-r from-[#fecb00] to-[#00aef0] px-10 py-4 text-xl font-bold text-white shadow-lg transition-all hover:from-[#00aef0] hover:to-[#fecb00]">
                         Contáctanos
                     </a>
                 </div>
@@ -131,7 +118,7 @@
         <!-- ========== SERVICES SECTION ========== --><section id="services" class="bg-gray-50 py-16 sm:py-24">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-base font-semibold uppercase tracking-wide text-rotomia-blue">Nuestros Servicios</h2>
+                    <h2 class="text-base font-semibold uppercase tracking-wide text-[#00aef0]">Nuestros Servicios</h2>
                     <p class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Soluciones Integrales de Publicidad</p>
                 </div>
 
@@ -145,7 +132,7 @@
                                 </div>
                             </div>
                             <!-- Cara Trasera (Información) --><div class="flip-card-back">
-                                <h3 class="text-xl font-bold text-rotomia-yellow">Corte en CNC</h3>
+                                <h3 class="text-xl font-bold text-[#fecb00]">Corte en CNC</h3>
                                 <p class="mt-2 text-base">Cortes de precisión computarizados en madera, metal, PVC, acrílico y vidrio.</p>
                             </div>
                         </div>
@@ -159,7 +146,7 @@
                                 </div>
                             </div>
                             <!-- Cara Trasera (Información) --><div class="flip-card-back">
-                                <h3 class="text-xl font-bold text-rotomia-yellow">Letras Encajueladas</h3>
+                                <h3 class="text-xl font-bold text-[#fecb00]">Letras Encajueladas</h3>
                                 <p class="mt-2 text-base">Letras 3D con iluminación LED de alta calidad para un acabado elegante y visible.</p>
                             </div>
                         </div>
@@ -173,7 +160,7 @@
                                 </div>
                             </div>
                             <!-- Cara Trasera (Información) --><div class="flip-card-back">
-                                <h3 class="text-xl font-bold text-rotomia-yellow">Rotulación Vehicular</h3>
+                                <h3 class="text-xl font-bold text-[#fecb00]">Rotulación Vehicular</h3>
                                 <p class="mt-2 text-base">Publicidad móvil para tu vehículo o flotilla completa con viniles de alta resistencia.</p>
                             </div>
                         </div>
@@ -187,7 +174,7 @@
                                 </div>
                             </div>
                             <!-- Cara Trasera (Información) --><div class="flip-card-back">
-                                <h3 class="text-xl font-bold text-rotomia-yellow">Impresión Digital</h3>
+                                <h3 class="text-xl font-bold text-[#fecb00]">Impresión Digital</h3>
                                 <p class="mt-2 text-base">Impresión en alta resolución sobre lona, vinil, microperforado y más.</p>
                             </div>
                         </div>
@@ -224,37 +211,37 @@
                     
                     <!-- Imagen 1 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
                         <img src="https://placehold.co/600x400/00aef0/ffffff?text=Letras+Encajueladas" alt="Proyecto de Letras Encajueladas" class="h-full w-full object-cover">
-                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <div class="absolute inset-0 bg-[#2d2d2d] opacity-0 transition-opacity group-hover:opacity-70"></div>
                         <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Letras Encajueladas</span>
                     </div>
                     
                     <!-- Imagen 2 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
                         <img src="https://placehold.co/600x400/fecb00/2d2d2d?text=Rotulación+Vehicular" alt="Proyecto de Rotulación Vehicular" class="h-full w-full object-cover">
-                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <div class="absolute inset-0 bg-[#2d2d2d] opacity-0 transition-opacity group-hover:opacity-70"></div>
                         <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Rotulación Vehicular</span>
                     </div>
 
                     <!-- Imagen 3 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
                         <img src="https://placehold.co/600x400/2d2d2d/ffffff?text=Impresión+Digital" alt="Proyecto de Impresión Digital" class="h-full w-full object-cover">
-                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <div class="absolute inset-0 bg-[#2d2d2d] opacity-0 transition-opacity group-hover:opacity-70"></div>
                         <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Impresión Digital</span>
                     </div>
 
                     <!-- Imagen 4 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
                         <img src="https://placehold.co/600x400/fecb00/2d2d2d?text=Stands+de+Feria" alt="Proyecto de Stands de Feria" class="h-full w-full object-cover">
-                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <div class="absolute inset-0 bg-[#2d2d2d] opacity-0 transition-opacity group-hover:opacity-70"></div>
                         <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Stands de Feria</span>
                     </div>
 
                     <!-- Imagen 5 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
                         <img src="https://placehold.co/600x400/2d2d2d/ffffff?text=Corte+CNC" alt="Proyecto de Corte CNC" class="h-full w-full object-cover">
-                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <div class="absolute inset-0 bg-[#2d2d2d] opacity-0 transition-opacity group-hover:opacity-70"></div>
                         <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Corte CNC</span>
                     </div>
 
                     <!-- Imagen 6 --><div class="group relative overflow-hidden rounded-lg shadow-xl transition-transform hover:scale-105">
                         <img src="https://placehold.co/600x400/00aef0/ffffff?text=Vallas+Publicitarias" alt="Proyecto de Vallas Publicitarias" class="h-full w-full object-cover">
-                        <div class="absolute inset-0 bg-rotomia-dark opacity-0 transition-opacity group-hover:opacity-70"></div>
+                        <div class="absolute inset-0 bg-[#2d2d2d] opacity-0 transition-opacity group-hover:opacity-70"></div>
                         <span class="absolute bottom-4 left-4 text-lg font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Vallas Publicitarias</span>
                     </div>
 
@@ -262,16 +249,16 @@
             </div>
         </section>
 
-        <!-- ========== ABOUT US SECTION ========== --><section id="about" class="bg-rotomia-dark text-white py-16 sm:py-24">
+        <!-- ========== ABOUT US SECTION ========== --><section id="about" class="bg-gray-100 text-[#2d2d2d] py-16 sm:py-24">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
                     <div>
                         <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Sobre Rotomía 504</h2>
-                        <p class="mt-6 text-lg text-gray-300">
+                        <p class="mt-6 text-lg text-[#2d2d2d]">
                             Somos una empresa dedicada a trabajos relacionados con el mundo del rótulo, la publicidad y la imagen.
                         </p>
-                        <p class="mt-4 text-lg text-gray-300">
-                            Nuestro servicio integral cubre <span class="font-bold text-rotomia-yellow">diseño, fabricación, montaje, reparación y mantenimiento</span>. Nos implicamos en sus proyectos como una extensión de su propia empresa, asegurando calidad y cuidando al detalle la imagen que proyecta a sus clientes.
+                        <p class="mt-4 text-lg text-[#2d2d2d]">
+                            Nuestro servicio integral cubre <span class="font-bold text-[#00aef0]">diseño, fabricación, montaje, reparación y mantenimiento</span>. Nos implicamos en sus proyectos como una extensión de su propia empresa, asegurando calidad y cuidando al detalle la imagen que proyecta a sus clientes.
                         </p>
                     </div>
                     <div class="rounded-lg overflow-hidden shadow-2xl">
@@ -281,17 +268,17 @@
             </div>
         </section>
 
-        <!-- ========== CONTACT CTA SECTION ========== --><section id="contact" class="bg-rotomia-yellow py-16 sm:py-24">
+        <!-- ========== CONTACT CTA SECTION ========== --><section id="contact" class="bg-[#fecb00] py-16 sm:py-24">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl font-extrabold tracking-tight text-rotomia-dark sm:text-4xl">
+                <h2 class="text-3xl font-extrabold tracking-tight text-[#2d2d2d] sm:text-4xl">
                     ¿Listo para iniciar tu proyecto?
                 </h2>
-                <p class="mt-4 text-lg leading-6 text-rotomia-dark">
+                <p class="mt-4 text-lg leading-6 text-[#2d2d2d]">
                     ¡Demos vida a tu marca! Contáctanos ahora para una asesoría gratuita.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center gap-6">
                     
-                    <!-- Botón de Email --><a href="mailto:hola@rotomia504.site" class="inline-flex items-center justify-center rounded-lg bg-rotomia-blue px-6 py-3 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105">
+                    <!-- Botón de Email --><a href="mailto:hola@rotomia504.site" class="inline-flex items-center justify-center rounded-lg bg-[#00aef0] px-6 py-3 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105">
                         <!-- Icono Mail SVG --><svg class="h-6 w-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                         </svg>
@@ -303,7 +290,7 @@
 
     </main>
 
-    <!-- ========== FOOTER ========== --><footer class="bg-rotomia-dark">
+    <!-- ========== FOOTER ========== --><footer class="bg-[#2d2d2d]">
         <div class="container mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center justify-between sm:flex-row">
                 <div class="flex items-center">
@@ -311,11 +298,11 @@
                     <span class="ml-4 text-lg font-bold text-white">Rotomía 504</span>
                 </div>
                 <div class="mt-4 text-center text-sm text-gray-400 sm:mt-0 sm:text-right">
-                    <div class="mb-2 flex justify-center sm:justify-end">
-                        <a href="https://www.instagram.com/rotomia504?igsh=eGRqNzV5MHE3bzBz" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-rotomia-yellow transition-colors">
+                    <div class="mb-2 flex justify-center sm:justify-end gap-4">
+                        <a href="https://www.instagram.com/rotomia504?igsh=eGRqNzV5MHE3bzBz" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#fecb00] transition-colors">
                             <span class="sr-only">Instagram</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M12 2.163c3.204 0 3.584.012 4.85.07 1.172.053 1.905.32 2.583.58a4.902 4.902 0 0 1 1.76 1.76c.26.678.527 1.41.58 2.583.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.172-.32 1.905-.58 2.583a4.902 4.902 0 0 1-1.76 1.76c-.678.26-1.41.527-2.583.58-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.172-.053-1.905-.32-2.583-.58a4.902 4.902 0 0 1-1.76-1.76c-.26-.678-.527-1.41-.58-2.583-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.172.32-1.905.58-2.583a4.902 4.902 0 0 1 1.76-1.76c.678-.26 1.41.527 2.583.58C8.416 2.175 8.796 2.163 12 2.163zm0 1.626c-3.14 0-3.483.01-4.695.067-1.11.05-1.716.29-2.203.48a3.272 3.272 0 0 0-1.178 1.178c-.19.487-.43 1.094-.48 2.203-.058 1.212-.067 1.555-.067 4.695s.01 3.483.067 4.695c.05 1.11.29 1.716.48 2.203a3.272 3.272 0 0 0 1.178 1.178c.487.19 1.094.43 2.203.48 1.212.058 1.555.067 4.695.067s3.483-.01 4.695-.067c1.11-.05 1.716-.29 2.203-.48a3.272 3.272 0 0 0 1.178-1.178c.19-.487.43-1.094.48-2.203.058-1.212.067-1.555.067-4.695s-.01-3.483-.067-4.695c-.05-1.11-.29-1.716-.48-2.203a3.272 3.272 0 0 0-1.178-1.178c-.487-.19-1.094.43-2.203-.48-1.212-.058-1.555-.067-4.695-.067zM12 6.873a5.127 5.127 0 1 0 0 10.254 5.127 5.127 0 0 0 0-10.254zm0 8.627a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm4.805-6.84a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z" clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M12 2.163c3.204 0 3.584.012 4.85.07 1.172.053 1.905.32 2.583.58a4.902 4.902 0 0 1 1.76 1.76c.26.678.527 1.41.58 2.583.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.172-.32 1.905-.58 2.583a4.902 4.902 0 0 1-1.76 1.76c-.678.26-1.41.527-2.583.58-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.172-.053-1.905-.32-2.583-.58a4.902 4.902 0 0 1-1.76-1.76c-.26-.678-.527-1.41-.58-2.583-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.172.32-1.905.58-2.583a4.902 4.902 0 0 1 1.76-1.76c.678-.26 1.41.527 2.583.58C8.416 2.175 8.796 2.163 12 2.163zm0 1.626c-3.14 0-3.483.01-4.695.067-1.11.05-1.716.29-2.203.48a3.272 3.272 0 0 0-1.178 1.178c-.19.487-.43 1.094-.48 2.203-.058 1.212-.067 1.555-.067 4.695s.01 3.483.067 4.695c.05 1.11.29 1.716.48 2.203a3.272 3.272 0 0 0 1.178 1.178c.487.19 1.094.43 2.203.48 1.212.058 1.555.067 4.695.067s3.483-.01 4.695-.067c1.11-.05 1.716-.29 2.203-.48a3.272 3.272 0 0 0 1.178-1.178c.19-.487.43-1.094.48-2.203.058-1.212.067-1.555.067-4.695s-.01-3.483-.067-4.695c-.05-1.11-.29-1.716-.48-2.203a3.272 3.272 0 0 0-1.178-1.178c-.487-.19-1.094.43-2.203.48-1.212-.058-1.555-.067-4.695-.067zM12 6.873a5.127 5.127 0 1 0 0 10.254 5.127 5.127 0 0 0 0-10.254zm0 8.627a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm4.805-6.84a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z" clip-rule="evenodd" />
                             </svg>
                         </a>
                     </div>
@@ -336,5 +323,3 @@
 
 </body>
 </html>
-
-
