@@ -79,6 +79,25 @@
             z-index: 10; pointer-events: none;
             background: linear-gradient(to left, white, transparent);
         }
+        @media (max-width: 768px) {
+  .marquee-overlay-left,
+  .marquee-overlay-right {
+    width: 40px; /* antes 120px */
+    background: linear-gradient(
+      to right,
+      rgba(255,255,255,0.6),
+      transparent
+    );
+  }
+
+  .marquee-overlay-right {
+    background: linear-gradient(
+      to left,
+      rgba(255,255,255,0.6),
+      transparent
+    );
+  }
+}
     </style>
 </head>
 <body class="bg-white text-[#2d2d2d] antialiased">
